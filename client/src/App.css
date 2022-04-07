@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+body{
+  background-color: white;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 300;
+}
+
+.Country-details{
+  margin: 1rem;
+}
+
+.Country-flag{
+  width:100%;
+  height: 50%;
+}
+
+.country-name{
+  font-weight: 600;
+}
+
+/************STYLING FOR THE GRID*********************/
+.grid-container{
+ /* // margin: 3% 3rem 1rem 5%; */
+  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  column-gap: 4rem;
+  row-gap: 3rem;
+}
+
+
+.grid-item{
+  background-color: hsl(0, 0%, 100%);
+  width: 15rem;
+  height: 21rem;
+}
+
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*************************** DROP DOWN MENU STYLING *****************/
+.drop-down-menu{
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  width: 15rem;
+  right: 3rem;
+  border-radius: 5%;
+}
+
+.btn{
+  display: block;
+  border: none;
+  background-color: white;
+  height: 2rem;
+  text-align: start;
+  width: 15rem;
+  padding-left: 1rem;
+  font-family: 'Nunito Sans';
+  font-weight: 600;
+}
+
+.btn-first{
+  margin-top: 0.5rem;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+}
+
+.btn-last{
+
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+}
+
+#drop-down-content{
+  border-radius: 5%;
+  position: absolute;
+}
+
+/********STATE FOR DROPDOWN********/
+.isActive{
+  display: block;
+}
+
+.isNotActive{
+  display: none;
+}
+
+
+
+/********** STYLING FOR SEARCH ***************/
+.search-bar{
+  border-radius: 3%;
+  display: flex;
+  align-items: center;
+  /* position: absolute; */
+  width: 30rem;
+  height: 3rem;
+  background-color: white;
+  margin-bottom: 2rem;
+}
+
+.search-input{
+  /* position: absolute; */
+  /* right: 1rem; */
+  margin-right: 1rem;
+  width: 26rem;
+  height: 2rem;
+  font-family: 'Nunito Sans';
+  font-weight: 600;
+  outline: none;
+  border: none;
+}
+
+.search-icon{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+input:focus{
+  outline: none;
+}
+
+/***********************STYLING FOR THE APP BAR *************************/
+.filter-btn{
+  /* display: flex;
+  align-items: center; */
+  border: none;
+  background-color: white;
+  height: 2rem;
+  text-align: right;
+  width: 8rem;
+  padding: 1rem;
+  font-family: 'Nunito Sans';
+  font-weight: 600;
+}
+
+.filter{
+  display: inline;
+  background-color: white;
+  width: 10rem;
+  height: 2.5rem;
+  /* display: flex;
+  align-items: center; */
+  border-radius: 5%;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+
+/**************APP BAR ****************/
+.app-bar{
+  position: relative;
+  background-color: white;
+  height: 5rem;
+  box-shadow: 0 0.1rem #cccccc;
+}
+
+.title{
+  font-weight: 800;
+  font-size: x-large;
+  display: inline;
+  position: absolute;
+  left: 5rem;
+  top: 0.3rem;
+}
+
+.query-bar{
+  padding-left: 5rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+
+/**********GRID FOR COUNTRY DETAILS*************/
+.details-grid{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.first-detail-grid-item{
+  grid-column: 1 / span 2;
+}
+
+.last-detail-grid-item{
+  grid-column: 1 / span 2;
+}
+
+/******** GRID FOR DETAILS PAGE *********/
+.country-grid{
+  margin: 6rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 3rem;
+}
+
+
+.detail-country-img{
+  width: 100%;
+  height: 20rem;
+}
+
+.back-button{
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  margin: 3rem 0 0 3rem;
+  border-radius: 10%;
+  background-color: white;
+  color: black;
+}
+
+/***********MEDIA QUERIES ***********/
+@media only screen and (max-width: 900px){
+  .grid-container{
+    grid-template-columns: auto auto;
+  }
+}
+
+
+@media only screen and (max-width: 1150px) {
+  .grid-container{
+    grid-template-columns: auto auto auto;
+  }
+}
+
+
+
+@media only screen and (max-width: 600px){
+  .grid-container{
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+
+
+  .drop-down-menu{
+    left: 5rem;
+    top: 3.5rem;
+  }
+
+  .country-grid{
+    grid-template-columns: auto;
+    margin: 1rem;
+  }
+
+} 
